@@ -11,14 +11,14 @@ class extract_pdf(object):
                 local_dir = os.getcwd()
                 print("local_dir: " + local_dir)
                 file_name = '{}/RVP.pdf'.format(local_dir)
-                #pdf 解析----------------------
+               
                 pdf = pdfplumber.open(file_name)
                 pages = pdf.pages[55:452]
                 page_num = 0
                 file_obj = []
                 for page in pages:
                     page_num += 1
-                    # isText判断了--输入的要求是要文字/表格
+                   
                     if isText:
                         txt_tmp = page.extract_text()
                         if txt_tmp:
@@ -30,11 +30,11 @@ class extract_pdf(object):
                                     for col in row:
                                         rows.append(re.sub('\n', '', str(col)))
                                     file_obj.append(rows)
-                    if not isText:  # 如果要表格，则返回列表
+                    if not isText:  
                         return file_obj
 
                 # pdf.close()
-                # os.remove(file_name)  # 读取文件后就删除掉文件
+                # os.remove(file_name)  
                 return pdf_content
             except Exception as e:
                 logging.error('{}'.format(e))
