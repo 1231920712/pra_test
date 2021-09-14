@@ -1,0 +1,73 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/resources.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./assets/js/common.js"></script>
+    <title>New resource</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header -->
+      <div id="header-container"></div>
+      <!-- Menu -->
+      <div id="top-menu-container"></div>
+
+      <!-- Content -->
+      <div class="content">
+        <h2 id="page-title">New resource</h2>
+        <form id="resource-new-form" class="column">
+          <!-- Actions -->
+          <div class="list-header">
+            <div style="flex: auto"></div>
+            <input class="submit-resource" type="submit" name="submitInfo" value="Submit" />
+            <a class="cancel-button" href="resource-list.html">Cancel</a>
+          </div>
+          <!-- Main -->
+          <div class="row pv-1">
+            <div class="column col-image-select">
+              <img id="resource-image" src="./assets/images/banner-1.png" width="140" height="150" />
+            </div>
+            <div class="column col-inputs">
+              <div class="column">
+                <label for="title">Location</label>
+                <input class="input-title" type="text" id="location" placeholder="Enter location" name="location" required />
+              </div>
+              <div class="column">
+                <label for="catalogue">Catalogue / Provenance</label>
+                <input class="input-title" type="text" id="catalogue" placeholder="Enter catalogue" name="catalogue" required />
+              </div>
+              <div class="column">
+                <label for="height">Height</label>
+                <input class="input-title" type="text" id="height" placeholder="Enter height" name="height" required />
+              </div>
+              <div class="column">
+                <label for="diameter">Diameter</label>
+                <input class="input-title" type="text" id="diameter" placeholder="Enter diameter" name="diameter" />
+              </div>
+              <div class="column">
+                <label for="plate">Plate reference</label>
+                <input class="input-title" type="text" id="plate" placeholder="Enter plate" name="plate" required />
+              </div>
+              <div class="column">
+                <label class="label" for="imageUrl">Image URL</label>
+                <input class="input-title" type="text" id="imageUrl" placeholder="Enter image url" name="imageUrl" />
+              </div>
+              <div class="column">
+                <label class="label" for="description">Description</label>
+                <textarea class="input-area" cols="40" rows="8" name="description" id="description" required></textarea>
+              </div>
+              <div class="column">
+                <label class="label" for="description">Note</label>
+                <textarea class="input-area" cols="40" rows="8" name="note" id="note"></textarea>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
